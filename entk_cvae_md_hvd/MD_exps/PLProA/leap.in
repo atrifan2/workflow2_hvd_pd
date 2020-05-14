@@ -1,0 +1,10 @@
+source leaprc.protein.ff14SBonlysc
+source leaprc.gaff
+source leaprc.water.tip3p
+set default PBRadii mbondi3
+prot = loadPDB /lambda_stor/homes/atrifan/covid19/PLPro_chainA/PLOPro_A.pdb # May need full filepath?
+solvatebox prot TIP3PBOX 15
+addions prot Na+ 0
+addions prot Cl- 0
+saveAmberParm prot prot.prmtop prot.inpcrd
+quit
